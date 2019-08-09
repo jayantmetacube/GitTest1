@@ -24,15 +24,6 @@ public class generakApk {
 		public AndroidDriver<AndroidElement> driver ;
 		initialiseApk2 apk = new initialiseApk2();
 		
-	    @BeforeTest
-		public void driverInitiate() throws MalformedURLException, InterruptedException
-		
-		{
-			
-			 driver = initialiseApk2.Capabilities();
-			
-		}
-		
 		
 			
 	    /*public AndroidDriver<AndroidElement> Capabilities() throws MalformedURLException, InterruptedException
@@ -64,6 +55,7 @@ public class generakApk {
 		
 		{	
 	      //this.driver
+			driver = initialiseApk2.Capabilities("General-Store.apk");
 			TouchAction t = new TouchAction(driver);
 			driver.findElement(By.id("com.androidsample.generalstore:id/nameField")).sendKeys("Hello");
 			driver.hideKeyboard();

@@ -6,6 +6,8 @@ import java.net.URL;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
 
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
@@ -29,12 +31,12 @@ public class initialiseApk2
 	}*/
 	
 	
-		
-    public static AndroidDriver<AndroidElement> Capabilities() throws MalformedURLException, InterruptedException
+	 @BeforeTest
+    public static AndroidDriver<AndroidElement> Capabilities(String apkName) throws MalformedURLException, InterruptedException
 	
 	 {
 		File f = new File("src");
-		File fs = new File(f,"General-Store.apk");
+		File fs = new File(f,apkName);
 		DesiredCapabilities capabilities = new DesiredCapabilities();
 		//capabilities.setCapability("BROWSER_NAME", "Android");
 		capabilities.setCapability("automationName", "uiautomator2");
@@ -51,9 +53,19 @@ public class initialiseApk2
 		return driver;
 		
 	}
-	
-	
-	
+	 
+	 
+	 
+	   		@AfterTest
+	   		
+	   		public void driverquit()
+	   		
+	   {
+		   
+		   driver.quit();
+		   
+	   }
+	   		
 	/*@Test
 	public void scenario1(AndroidDriver<AndroidElement> driver) throws InterruptedException, MalformedURLException
 	
