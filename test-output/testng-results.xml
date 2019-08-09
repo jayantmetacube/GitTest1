@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="125948" started-at="2019-08-09T21:20:19Z" finished-at="2019-08-09T21:22:25Z">
+    <groups>
+    </groups>
+    <test name="Test" duration-ms="125948" started-at="2019-08-09T21:20:19Z" finished-at="2019-08-09T21:22:25Z">
+      <class name="Mobileappium.generakApk">
+        <test-method status="PASS" signature="driverInitiate()[pri:0, instance:Mobileappium.generakApk@188715b5]" name="driverInitiate" is-config="true" duration-ms="25764" started-at="2019-08-09T21:20:19Z" finished-at="2019-08-09T21:20:45Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- driverInitiate -->
+        <test-method status="PASS" signature="scenario1()[pri:0, instance:Mobileappium.generakApk@188715b5]" name="scenario1" duration-ms="44017" started-at="2019-08-09T21:20:45Z" finished-at="2019-08-09T21:21:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- scenario1 -->
+        <test-method status="PASS" signature="driverquit()[pri:0, instance:Mobileappium.generakApk@188715b5]" name="driverquit" is-config="true" duration-ms="56127" started-at="2019-08-09T21:21:29Z" finished-at="2019-08-09T21:22:25Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- driverquit -->
+      </class> <!-- Mobileappium.generakApk -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
