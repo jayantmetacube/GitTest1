@@ -7,6 +7,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeTest;
 
 import io.appium.java_client.android.AndroidDriver;
@@ -31,7 +32,7 @@ public class initialiseApk2
 	}*/
 	
 	
-	 @BeforeTest
+	 @BeforeClass
     public static AndroidDriver<AndroidElement> Capabilities(String apkName) throws MalformedURLException, InterruptedException
 	
 	 {
@@ -57,7 +58,6 @@ public class initialiseApk2
 	 
 	 
 	   		@AfterTest
-	   		
 	   		public void driverquit()
 	   		
 	   {
