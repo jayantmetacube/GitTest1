@@ -3,8 +3,8 @@
 <suite name="Suite">
   <test name="Test">
     <classes>
-      <class name="Mobileappium.ApiDemos"/>
-      <class name="Mobileappium.generakApk"/>
+      <class name="Mobileappium.ApiDemosTest"/>
+      <class name="Mobileappium.generakApkTest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

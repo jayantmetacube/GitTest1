@@ -6,14 +6,12 @@
 	<artifactId>TestProjecct</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
-
 	<name>TestProjecct</name>
 	<url>http://maven.apache.org</url>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
-
 	<dependencies>
 		<dependency>
 			<groupId>io.appium</groupId>
@@ -37,6 +35,10 @@
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
+	
+	<profiles>
+	<profile>
+	<id>MainTest</id>
 	<build>
 		<plugins>
 			<plugin>
@@ -44,13 +46,12 @@
 				<artifactId>maven-surefire-plugin</artifactId>
 				<version>2.18.1</version>
 				<configuration>
-					<suiteXmlFiles>
-						TestNG suite XML files
-						<suiteXmlFile name="Suite">testng.xml</suiteXmlFile>
-					</suiteXmlFiles>
+						<suiteXmlFile>testng.xml</suiteXmlFile>
 					<configfailurepolicy>continue</configfailurepolicy>
 				</configuration>
 			</plugin>
 		</plugins>
 	</build>
+	</profile>
+	</profiles>
 </project>

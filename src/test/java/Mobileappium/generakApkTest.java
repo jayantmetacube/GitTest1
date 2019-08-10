@@ -19,7 +19,9 @@ import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 
 
-public class generakApk {
+public class generakApkTest 
+
+{
 	//public  static AndroidDriver<AndroidElement> driver;
 		public AndroidDriver<AndroidElement> driver ;
 		initialiseApk2 apk = new initialiseApk2();

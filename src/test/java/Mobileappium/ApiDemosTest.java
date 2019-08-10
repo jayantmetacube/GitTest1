@@ -20,7 +20,7 @@ import io.appium.java_client.remote.MobileCapabilityType;
 import static java.time.Duration.ofSeconds;
 import  static io.appium.java_client.touch.offset.ElementOption.element;
 
-public class ApiDemos
+public class ApiDemosTest
 
 {
 	
