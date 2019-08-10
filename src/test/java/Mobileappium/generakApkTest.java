@@ -52,7 +52,7 @@ public class generakApkTest
 		
 		
 		
-		@Test
+		//@Test
 		public void scenario1() throws InterruptedException, MalformedURLException
 		
 		{	
@@ -128,6 +128,13 @@ public class generakApkTest
 			   Double amnt = Double.parseDouble(p);
 			   return amnt;      
 		   }
+		   
+		   
+		   @Test
+			public void testCase()
+			{
+				System.out.println("generalApkTest");
+			}
 		   
 		  
 			

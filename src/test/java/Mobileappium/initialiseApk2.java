@@ -31,9 +31,8 @@ public class initialiseApk2
 		
 	}*/
 	
-	
-	 @BeforeClass
-    public static AndroidDriver<AndroidElement> Capabilities(String apkName) throws MalformedURLException, InterruptedException
+	  //@BeforeClass
+       public static AndroidDriver<AndroidElement> Capabilities(String apkName) throws MalformedURLException, InterruptedException
 	
 	 {
 		File f = new File("src");
@@ -57,7 +56,7 @@ public class initialiseApk2
 	 
 	 
 	 
-	   		@AfterTest
+	   		//@AfterTest
 	   		public void driverquit()
 	   		
 	   {

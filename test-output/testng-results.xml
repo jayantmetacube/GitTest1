@@ -2,24 +2,16 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="125948" started-at="2019-08-09T21:20:19Z" finished-at="2019-08-09T21:22:25Z">
+  <suite name="Suite" duration-ms="70" started-at="2019-08-10T18:12:27Z" finished-at="2019-08-10T18:12:27Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="125948" started-at="2019-08-09T21:20:19Z" finished-at="2019-08-09T21:22:25Z">
-      <class name="Mobileappium.generakApk">
-        <test-method status="PASS" signature="driverInitiate()[pri:0, instance:Mobileappium.generakApk@188715b5]" name="driverInitiate" is-config="true" duration-ms="25764" started-at="2019-08-09T21:20:19Z" finished-at="2019-08-09T21:20:45Z">
+    <test name="Test" duration-ms="70" started-at="2019-08-10T18:12:27Z" finished-at="2019-08-10T18:12:27Z">
+      <class name="Mobileappium.ApiDemosTest">
+        <test-method status="PASS" signature="testCase()[pri:0, instance:Mobileappium.ApiDemosTest@481a996b]" name="testCase" duration-ms="20" started-at="2019-08-10T18:12:27Z" finished-at="2019-08-10T18:12:27Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- driverInitiate -->
-        <test-method status="PASS" signature="scenario1()[pri:0, instance:Mobileappium.generakApk@188715b5]" name="scenario1" duration-ms="44017" started-at="2019-08-09T21:20:45Z" finished-at="2019-08-09T21:21:29Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- scenario1 -->
-        <test-method status="PASS" signature="driverquit()[pri:0, instance:Mobileappium.generakApk@188715b5]" name="driverquit" is-config="true" duration-ms="56127" started-at="2019-08-09T21:21:29Z" finished-at="2019-08-09T21:22:25Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- driverquit -->
-      </class> <!-- Mobileappium.generakApk -->
+        </test-method> <!-- testCase -->
+      </class> <!-- Mobileappium.ApiDemosTest -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>

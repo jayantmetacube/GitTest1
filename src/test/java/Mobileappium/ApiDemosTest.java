@@ -25,7 +25,7 @@ public class ApiDemosTest
 {
 	
 	public static AndroidDriver<AndroidElement> driver ;
-	@Test
+	//@Test
 	public static void scenario2() throws MalformedURLException, InterruptedException
 	
 	{
@@ -81,8 +81,11 @@ public class ApiDemosTest
 		t.longPress(longPressOptions().withElement(element(e1)).withDuration(ofSeconds(2))).moveTo(element(e2)).release().perform();
 	}
 	
-	
-	
+	@Test
+	public void testCase()
+	{
+		System.out.println("ApiDemosTest");
+	}
 	
 	
 
