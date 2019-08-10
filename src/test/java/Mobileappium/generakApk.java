@@ -109,7 +109,7 @@ public class generakApk {
 	       
 	       WebElement e4 = driver.findElement(By.id("com.androidsample.generalstore:id/btnProceed"));
 	       t.tap(tapOptions().withElement(element(e4))).perform();
-	       Thread.sleep(7000);
+	       Thread.sleep(5000);
 	       Set<String> contextnames = driver.getContextHandles();
 	       driver.context((String) contextnames.toArray()[1]);
 	       driver.findElement(By.name("q")).sendKeys("keysToSend");
@@ -127,11 +127,6 @@ public class generakApk {
 			   return amnt;      
 		   }
 		   
-		   @AfterTest
-		   public void driverquit()
-		   {
-			   
-			   driver.quit();
-		   }
+		  
 			
 }
