@@ -1,10 +1,15 @@
 package Mobileappium;
 
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
+import org.apache.tools.ant.taskdefs.Get;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
@@ -15,7 +20,9 @@ import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.remote.MobileCapabilityType;
 
 
-public class initialiseApk2 
+public class initialiseApk2
+
+  
 
 {
 
@@ -32,17 +39,22 @@ public class initialiseApk2
 	}*/
 	
 	  //@BeforeClass
-       public static AndroidDriver<AndroidElement> Capabilities(String apkName) throws MalformedURLException, InterruptedException
+       public static AndroidDriver<AndroidElement> Capabilities(String appName) throws InterruptedException, IOException
 	
 	 {
+   
+    	   FileInputStream fis = new FileInputStream(System.getProperty("user.dir")+"\\src\\main\\java\\ClassPath\\TestProjecct\\global.properties");
+    	   Properties prop = new Properties();
+    	   prop.load(fis);
 		File f = new File("src");
-		File fs = new File(f,apkName);
+		File fs = new File(f, prop.getProperty(appName));
 		DesiredCapabilities capabilities = new DesiredCapabilities();
 		//capabilities.setCapability("BROWSER_NAME", "Android");
 		capabilities.setCapability("automationName", "uiautomator2");
 		//capabilities.setCapability("VERSION", "4.4.2"); 
 		//capabilities.setCapability("deviceName","Android Device");
-		capabilities.setCapability("deviceName","Galaxy S6 edge");
+		String device = (String) prop.get("DeviceUsed");
+		capabilities.setCapability("deviceName",device);
 		capabilities.setCapability(MobileCapabilityType.APP, fs.getAbsolutePath());
 		capabilities.setCapability("platformName","Android");
 		/*capabilities.setCapability("appPackage", "com.sec.android.app.popupcalculator");		

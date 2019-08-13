@@ -11,6 +11,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
+import ClassPath.TestProjecct.findByLoginPage;
 import io.appium.java_client.TouchAction;
 import  static io.appium.java_client.touch.TapOptions.tapOptions;
 import  static io.appium.java_client.touch.LongPressOptions.longPressOptions;
@@ -23,8 +24,10 @@ import  static io.appium.java_client.touch.offset.ElementOption.element;
 public class ApiDemosTest
 
 {
+
 	
 	public static AndroidDriver<AndroidElement> driver ;
+	
 	//@Test
 	public static void scenario2() throws MalformedURLException, InterruptedException
 	
@@ -58,7 +61,7 @@ public class ApiDemosTest
         int num = driver.findElementsByAndroidUIAutomator("new UiSelector().clickable(true)").size();
         System.out.println(num);
       */
-		driver = initialiseApk2.Capabilities("ApiDemos-debug.apk");
+		//driver = initialiseApk2.Capabilities("ApiDemos-debug.apk");
 		driver.findElementByAndroidUIAutomator("text(\"Views\")").click();
 		/*driver.findElement(By.xpath("//android.widget.TextView[@text='Date Widgets']")).click();
 		driver.findElement(By.xpath("//android.widget.TextView[@text='2. Inline']")).click();

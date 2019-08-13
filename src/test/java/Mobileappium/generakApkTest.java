@@ -4,6 +4,7 @@ import  static io.appium.java_client.touch.LongPressOptions.longPressOptions;
 import  static io.appium.java_client.touch.TapOptions.tapOptions;
 import  static io.appium.java_client.touch.offset.ElementOption.element;
 
+import java.io.IOException;
 import java.net.MalformedURLException;
 import java.util.Set;
 
@@ -14,6 +15,7 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
+import ClassPath.TestProjecct.findByLoginPage;
 import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
@@ -22,11 +24,48 @@ import io.appium.java_client.android.AndroidElement;
 public class generakApkTest 
 
 {
-	//public  static AndroidDriver<AndroidElement> driver;
-		public AndroidDriver<AndroidElement> driver ;
-		initialiseApk2 apk = new initialiseApk2();
+	public  static AndroidDriver<AndroidElement> driver;
+	
+    @Test
+	public void testCase()
+	{
+		System.out.println("generalApkTest");
+	}
+	
+
+	/*   public  generakApkTest(AndroidDriver<AndroidElement> driver) throws Throwable
+	{
 		
+		try 
+		{
+			scenario1(driver);
+		} 
 		
+		catch (MalformedURLException e)
+		
+		{
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		finalize();
+		
+	}
+	
+	 
+	   protected void finalize()
+	   
+	   {
+		   testCase();
+		  
+		   
+	   }*/
+	    
 			
 	    /*public AndroidDriver<AndroidElement> Capabilities() throws MalformedURLException, InterruptedException
 		
@@ -49,22 +88,27 @@ public class generakApkTest
 			return driver;
 			
 		}*/
-		
-		
-		
-		//@Test
-		public void scenario1() throws InterruptedException, MalformedURLException
+	    @Test  
+		public void scenario1() throws InterruptedException, IOException
 		
 		{	
 	      //this.driver
-			driver = initialiseApk2.Capabilities("General-Store.apk");
+			driver = initialiseApk2.Capabilities("GeneralApkName");
+			findByLoginPage findby = new findByLoginPage(driver);
 			TouchAction t = new TouchAction(driver);
-			driver.findElement(By.id("com.androidsample.generalstore:id/nameField")).sendKeys("Hello");
+			
+			findby.username.sendKeys("Hello");
+			
+			
+			//driver.findElement(By.id("com.androidsample.generalstore:id/nameField")).sendKeys("Hello");
 			driver.hideKeyboard();
-	        driver.findElement(By.xpath("//android.widget.RadioButton[@text='Female']")).click();
-	        driver.findElement(By.id("com.androidsample.generalstore:id/spinnerCountry")).click();
+			findby.radiobutton.click();
+	        //driver.findElement(By.xpath("//android.widget.RadioButton[@text='Female']")).click();
+			findby.contrydrpdwn.click();
+	        //driver.findElement(By.id("com.androidsample.generalstore:id/spinnerCountry")).click();
 	        driver.findElementByAndroidUIAutomator("new UiScrollable(new UiSelector()).scrollIntoView(text(\"Argentina\"));").click();
-	        driver.findElement(By.id("com.androidsample.generalstore:id/btnLetsShop")).click();
+	        findby.letsshop.click();
+	        //driver.findElement(By.id("com.androidsample.generalstore:id/btnLetsShop")).click();
 	        driver.findElementByAndroidUIAutomator("new UiScrollable(new UiSelector()"
 	                + ".resourceId(\"com.androidsample.generalstore:id/rvProductList\")).scrollIntoView("
 	                + "new UiSelector().text(\"Jordan 6 Rings\"));");
@@ -121,6 +165,8 @@ public class generakApkTest
 	       
 	    }
 		
+		
+		
 		   public static Double amount(String p)
 		   
 		   {
@@ -130,11 +176,7 @@ public class generakApkTest
 		   }
 		   
 		   
-		   @Test
-			public void testCase()
-			{
-				System.out.println("generalApkTest");
-			}
+		   
 		   
 		  
 			
